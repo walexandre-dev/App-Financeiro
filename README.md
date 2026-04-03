@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# 📈 App Financeiro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do **App Financeiro**, uma aplicação web moderna para gestão de finanças pessoais.
 
-Currently, two official plugins are available:
+## 💻 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto tem como objetivo principal oferecer uma interface limpa, intuitiva e fácil de usar para que os usuários possam registrar, categorizar e gerenciar seus ganhos e despesas diárias de forma eficiente. Através de recursos visuais e gráficos dinâmicos, o App Financeiro ajuda no acompanhamento das movimentações financeiras pessoais com muito mais facilidade.
 
-## React Compiler
+## 🚀 Funcionalidades Principais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Dashboard Integrado:** Visão geral rápida dos seus saldos, receitas e despesas.
+- **Controle de Transações:** Adição de entradas e saídas de forma fácil, permitindo categorizar e descrever cada transação.
+- **Categorias Dinâmicas:** Classifique seus gastos e ganhos para facilitar as métricas.
+- **Gráficos Interativos:** Componentes visuais para apresentar a saúde financeira de forma gráfica.
+- **Relatórios:** Acompanhe tendências de gastos por semana, mês ou ano.
+- **Suporte Offline e Local:** Gerenciamento seguro direto no navegador.
+- **Tema Customizado:** Design moderno adaptável aos modos Claro/Escuro.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Este projeto foi construído com ferramentas de ponta para garantir o máximo de eficiência, segurança e modernidade no front-end:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **[React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)**: A base sólida da aplicação (fortemente tipada).
+- **[Vite](https://vitejs.dev/)**: Um "bundler" ultra-rápido de extrema performance em desenvolvimento.
+- **[Tailwind CSS (v4)](https://tailwindcss.com/)**: Estilização foca em utilitários para construir interfaces deslumbrantes.
+- **[Zustand](https://zustand-demo.pmnd.rs/)**: Gerenciamento leve, rápido e fácil dos estados do App.
+- **[React Router DOM](https://reactrouter.com/)**: Gerenciamento de navegação das páginas.
+- **[Supabase](https://supabase.com/) & [Dexie (IndexedDB)](https://dexie.org/)**: Uma combinação eficiente entre Cloud Database relacional e persistência de dados local (offline-first).
+- **[Framer Motion](https://www.framer.com/motion/)**: Responsável por animações, interações fluídas e de impacto visual.
+- **[Recharts](https://recharts.org/)**: Motor para gráficos em dados financeiros.
+- **[Lucide React](https://lucide.dev/)**: Conjunto de ícones minimalistas e modernos.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Como executar o projeto localmente
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Para rodar este projeto na sua máquina, siga os passos abaixo:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Pré-requisitos
+- Ter o **[Node.js](https://nodejs.org/en)** instalado na máquina.
+- Utilizar um gerenciador de pacotes de sua preferência (`npm`, `yarn` ou `pnpm`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Passos:
+1. Clone este repositório em sua máquina local via terminal:
+   ```bash
+   git clone https://github.com/walexandre-dev/App-Financeiro.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd App-Financeiro
+   ```
+3. Instale todas as dependências utilizando o terminal:
+   ```bash
+   npm install
+   ```
+4. Configure as chaves de API (se necessário) copiando o arquivo `.env.example` para `.env.local` e adicionando suas chaves do Supabase.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5. Execute o ambiente de desenvolvimento local:
+   ```bash
+   npm run dev
+   ```
+6. O projeto será aberto em um endereço no local, abra em seu navegador (geralmente será em `http://localhost:5173/`).
+
+## 📝 Licença
+
+Desenvolvido com muito trabalho por [walexandre-dev](https://github.com/walexandre-dev). Sinta-se à vontade para enviar um Pull-Request ou criar Issues.
